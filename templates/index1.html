@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Color Palette Generator</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <div class="header">
+
+    <h2 class="logo">Coolors</h2>
+
+    <div class="menu">
+      <ul>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <label>
+    <input class="checkbox" type="checkbox">
+    <div class="toggle">
+      <span class="top_line common"></span>
+      <span class="middle_line common"></span>
+      <span class="bottom_line common"></span>
+    </div>
+
+
+    <div class="slide">
+      <h1>MENU</h1>
+      <ul class="sidebar">
+        <li>
+          <a href="{{ url_for('image') }}">
+            <i class="fas fa-tv"></i>
+            Image Picker
+          </a> 
+        </li>
+
+        <!-- <li>
+          <a href="#">
+            <i class="fas fa-gripfire"></i>
+            Color Picker
+          </a> 
+        </li> -->
+
+        <li>
+          <a href="#">
+            <i class="fas fa-user"></i>
+            profile
+          </a> 
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fas fa-heart"></i>
+            favourites
+          </a> 
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fas fa-folder"></i>
+            file manager
+          </a> 
+        </li>
+
+        
+        <li>
+          <a href="#">
+            <i class="fas fa-comments"></i>
+            messages
+          </a> 
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="fas fa-cogs"></i>
+            settings
+          </a> 
+        </li>
+
+      </ul>
+    </div>
+  </label>
+
+
+
+  <ul class="container">
+    <!-- Palette boxes with color pickers will be dynamically generated here -->
+  </ul>
+  <button class="refresh-btn">Refresh Palette</button>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <script>
+    document.getElementById("back").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent the default action of the anchor element
+      window.history.back(); // Navigate back to the previous page or action
+    });
+  </script>
+
+  
+
+
+</body>
+</html>

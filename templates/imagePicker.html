@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Color Picker</title>
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+        rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/imagePicker.css')}}">
+
+</head>
+
+<body>
+    
+    <div class="header">
+
+        <h2 class="logo">Coolors</h2>
+
+
+    </div>
+    
+    <label>
+
+        <input class="checkbox" type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+
+
+        <div class="slide">
+
+            <h1>MENU</h1>
+
+            <ul class="sidebar">
+
+                <li>
+                    <a href="index1.html">
+                        <i class="fas fa-gripfire"></i>
+                        Color Picker 
+                    </a> 
+                </li>
+
+                <li>
+                <!-- <a href="imagePicker.html">
+                    <i class="fas fa-tv"></i>
+                    Image Picker
+                </a> 
+                </li> -->
+
+                <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    profile
+                </a> 
+                </li>
+
+                <li>
+                    <a href="#">
+                      <i class="fas fa-heart"></i>
+                      favourites
+                    </a> 
+                  </li>
+          
+                  <li>
+                    <a href="#">
+                      <i class="fas fa-folder"></i>
+                      file manager
+                    </a> 
+                  </li>
+          
+                  
+                  <li>
+                    <a href="#">
+                      <i class="fas fa-comments"></i>
+                      messages
+                    </a> 
+                  </li>
+
+                <li>
+                <a href="#">
+                    <i class="fas fa-cogs"></i>
+                    settings
+                </a> 
+                </li>
+            </ul>
+        </div>
+    </label>
+
+    <div class="wrapper">
+
+      <div class="image-container">
+        <img id="image" src="demo-image-3.jpg" />
+      </div>
+
+      <div class="btns-container">
+        <input type="file" id="file" accesskey="image/*" />
+        <label class="label4file" for="file">Open A Photo</label>
+        <button id="pick-color">Pick Color</button>
+      </div>
+
+      <div id="error" class="hide"></div>
+
+      <div id="result" class="hide">
+        <div>
+          <input type="text" id="hex-val-ref" />
+          <button onclick="copy('hex-val-ref')">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+
+        <div>
+          <input type="text" id="rgb-val-ref" />
+          <button onclick="copy('rgb-val-ref')">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+
+        <div id="picked-color-ref"></div>
+
+      </div>
+
+      <div id="custom-alert">Color Code Copied!</div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/imagePicker.js') }}"></script>
+  </body>
+</html>
