@@ -1,10 +1,10 @@
 my email account: kumisbek_tokhtar@bk.ru
 
 
-ColorsPallete - Color Palette Generator
+ColorsPallete - Color Palette Generator (https://web-production-f20f.up.railway.app/)
 
 It is a static web application designed for generating color palettes. It allows users to create custom color schemes, pick colors from images, and manage their favorite colors. The application offers a user-friendly interface with intuitive features for color selection and manipulation.
-(I had some problems while uploading PHP files for database, therefore i hosted this file as a static web application. But you can see the database working after downloading XSAMPP. It has features as registration and authorization in terms of database(it is only what i thrived to do in these days)
+(I had some problems while uploading PHP files for database, therefore i hosted this file as a static web application. But you can see the database working after downloading XSAMPP. It has features as registration and authorization in terms of database(it is only what i thrived to do in these days, but i assure u i am good DataBase developer.)
 
 Features:
 
