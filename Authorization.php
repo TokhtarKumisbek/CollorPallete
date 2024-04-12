@@ -3,7 +3,7 @@
 
 
 <?php
-session_start(); // Start the session
+session_start(); 
 
 if (isset($_POST['loginButton'])) {
     include('connection.php');  
@@ -13,7 +13,7 @@ if (isset($_POST['loginButton'])) {
     $email = $_POST['email'];  
     $password = $_POST['password'];  
     
-    // To prevent SQL injection  
+
     $email = $mysqli->real_escape_string($email);
     $password = $mysqli->real_escape_string($password);  
     
@@ -22,20 +22,20 @@ if (isset($_POST['loginButton'])) {
     $result = $mysqli->query($sql);  
 
     if (!$result) {
-        // Query execution failed
+     
         echo "<h1> Login failed. Error executing the query.</h1>";
     } else {
         $count = $result->num_rows;  
 
         if ($count == 1) {  
             $row = $result->fetch_assoc();
-            // $_SESSION["email"] = $row['email'];// Assuming 'username' is the column name for the user's username
+            
             header('Location: index1.html');
-            exit(); // Stop further execution
+            exit(); 
         } else {  
-            echo "<script>alert('Login failed. Invalid username or password.');</script>"; // Display alert message
-            echo "<script>window.location.href = 'EventHomePage.html';</script>"; // Redirect user after displaying alert
-            exit; // Stop further execution
+            echo "<script>alert('Login failed. Invalid username or password.');</script>"; 
+            echo "<script>window.location.href = 'EventHomePage.html';</script>"; 
+            exit; 
         }  
     }
 }  
