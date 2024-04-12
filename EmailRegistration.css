@@ -110,7 +110,7 @@ body {
 
 .underNext {
     display: flex;
-    justify-content: space-between; /* This will space out the child elements */
+    justify-content: space-between; 
     letter-spacing: 1px;
     margin-bottom: 9%;
 }
@@ -118,13 +118,13 @@ body {
 .login {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
-    width: 20%; /* Width of the login button */
+    width: 20%;
 }
 
 .back {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
-    width: 15%; /* Width of the back button */
+    width: 15%;
    
 }
 
