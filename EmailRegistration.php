@@ -6,23 +6,22 @@ if(isset($_POST['registerButton'])) {
 
     $hostname = "localhost";
     $db_username = "root";
-    $db_password = ""; // Corrected variable name for database password
-    $db_name = "registeruser"; // Replace "your_database_name" with your actual database name
+    $db_password = ""; 
+    $db_name = "registeruser"; 
     
-    $mysqli = new mysqli($hostname, $db_username, $db_password, $db_name); // Corrected instantiation of MySQLi object
+    $mysqli = new mysqli($hostname, $db_username, $db_password, $db_name); 
     
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
 
-    // Check if email already exists in the database
     $check_query = "SELECT * FROM users WHERE email='$email'";
     $result = $mysqli->query($check_query);
     if ($result->num_rows > 0) {
         $notification = "This email account is already registered.";
 
     } else {
-        // Email doesn't exist, proceed with registration
+        
         $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 
         if ($mysqli->query($query) === TRUE) {
@@ -59,7 +58,7 @@ if(isset($_POST['registerButton'])) {
             <div class="row">
                 <input type="email" class="type" placeholder="Enter your e-mail here" name="email" required >
                 <input type="password" class="type" placeholder="Enter yourpassword here" name="password" required >
-                <!-- Display the notification message here -->
+                
                 <?php if (!empty($notification)): ?>
                     <div style="color: red;"><?php echo htmlspecialchars($notification); ?></div>
                 <?php endif; ?>
